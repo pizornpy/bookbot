@@ -10,6 +10,8 @@ def main():
     print(amt_words)
     print(map)
 
+    print_hashmap(map)
+
 def count_words(string):
 
     return len(string.split())
@@ -24,5 +26,13 @@ def count_chars(string):
         else: 
             map[e] = 1
     return map
+
+def print_hashmap(map):
+    # Sort the dictionary by value in descending order
+    sorted_map = sorted(map.items(), key=lambda x: x[1], reverse=True)
+    
+    # Print the sorted map
+    for k, v in sorted_map:
+        print(f"The character {k} was found {v} times")
 
 main()
