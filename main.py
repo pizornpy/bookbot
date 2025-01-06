@@ -18,7 +18,7 @@ def count_chars(string):
 
     map = {}
 
-    for e in string: 
+    for e in string.lower(): 
         if e in map:
             map[e] += 1 
         else: 
